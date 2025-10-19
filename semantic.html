@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Tags</title>
+  </head>
+  <style>
+    #Cards {
+      width: 200px;
+    }
+    .footer {
+      text-align: right;
+      font-style: italic;
+    }
+    .Grid {
+      display: grid;
+      grid-template-columns: 1fr 15%;
+    }
+  </style>
+  <body>
+    <!-- Tarayıcının yazdığımız sayfayı tanıması için yapılan genel tasarım şekli -->
+    <!-- div veya span şeklinde etiketlerle istediğimiz şekillendirmeyi yaparız ama aramalarda yukarı çıkmanın kuralları var -->
+    <!-- Menü Bölümü header -->
+    <header>
+      <nav>
+        <ul>
+          <a href="#Home"><li>Anasayfa</li></a>
+          <a href="#Services"><li>Hizmetler</li></a>
+          <a href="#Contact"><li>İletişim</li></a>
+        </ul>
+      </nav>
+    </header>
+    <!-- Sayfa Başı -->
+    <h1>Sayfa Yapısı</h1>
+    <figure>
+      <img src="img/img_sem_elements.gif" alt="harita" />
+      <figcaption>Site Oluşturma Haritası</figcaption>
+    </figure>
+    <!-- Ana Yapı -->
+    <div class="Grid">
+      <!-- Ana İçerik -->
+      <main>
+        <section>
+          <h2>Müşteri İhtiyaçları Analizi</h2>
+          <p>
+            Müşterilerin, farkında olamadıkları ama işlerini kolaylaştıracak
+            detayları fark edip kayıt altına almak
+          </p>
+        </section>
+        <section>
+          <h2>Müşteri Odaklı Çözümler</h2>
+          <p>Kişi veya işletmenin özelinde uygulanacak, çözüm yolları.</p>
+          <figure>
+            <img id="Cards" src="img/moon/moon&mount.jpg" alt="Card-1" />
+            <figcaption>Birinci Kart Açıklaması</figcaption>
+            <img id="Cards" src="img/moon/moon&birds.jpg" alt="Card-2" />
+            <figcaption>İkinci Kart Açıklaması</figcaption>
+          </figure>
+        </section>
+      </main>
+      <!-- Yan İçerik -->
+      <aside>
+        <figure>
+          <img
+            src="img/moon/moon&birds.jpg"
+            alt="pop-up-photo"
+            width="200"
+            height="200"
+          />
+          <figcaption>Alt açıklama <a href="#">Yönlendirme</a></figcaption>
+        </figure>
+      </aside>
+    </div>
+    <!-- Tarih -->
+    <p>Şu anki zaman: <time id="current-time"></time></p>
+    <script>
+      const now = new Date();
+      document.getElementById("current-time").textContent =
+        now.toLocaleString("tr-TR");
+    </script>
+    <!-- Alt Bölüm -->
+    <details>
+      <summary>Html?</summary>
+      <p>Öğrenmeye Devam Et..</p>
+    </details>
+    <!-- Kapanış -->
+    <footer>
+      <p class="footer">Öğrenmek İçin Yola Çıkılmış Bir Projenin Ürünüdür.</p>
+    </footer>
+  </body>
+</html>
