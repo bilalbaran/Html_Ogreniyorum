@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaydol</title>
+  </head>
+  <body>
+    <h1>Kayıt Oluştur</h1>
+    <form action="uygulama.html">
+      <div>
+        <label for="name_">
+          Kullanıcı Adı:
+          <input
+            type="text"
+            id="name_"
+            placeholder="Kullanıcı Adı Girin!"
+            required
+          />
+        </label>
+      </div>
+      <br />
+      <div>
+        <label for="email_">
+          E-Mail:
+          <input
+            type="email"
+            id="email_"
+            placeholder="E-mail Girin!"
+            required
+          />
+        </label>
+      </div>
+      <br />
+      <div>
+        <label for="password_">
+          Şifre:
+          <input
+            type="password"
+            id="password_"
+            placeholder="Şifre Giriniz!"
+            required
+          />
+        </label>
+      </div>
+      <br />
+      <div>
+        <label>
+          Erkek
+          <input type="radio" name="gender" required />
+        </label>
+        <label>
+          Kadın
+          <input type="radio" name="gender" required />
+        </label>
+      </div>
+      <br />
+      <div>
+        <input type="submit" value="Kaydol" />
+      </div>
+      <br />
+      <b>Bir Hesabın Var mı? <a href="login.html">Giriş Yap</a></b>
+    </form>
+  </body>
+</html>
